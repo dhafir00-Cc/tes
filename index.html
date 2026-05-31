@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meteor Mini</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-card" aria-label="Meteor Mini">
+        <div class="hud">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>Meteor Mini</span>
+          </div>
+          <div class="stats" aria-live="polite">
+            <div>
+              <span>Skor</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span>Level</span>
+              <strong id="level">1</strong>
+            </div>
+            <div>
+              <span>Nyawa</span>
+              <strong id="lives">3</strong>
+            </div>
+            <div>
+              <span>Rekor</span>
+              <strong id="best">0</strong>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="pauseBtn" class="icon-button" title="Jeda" aria-label="Jeda">
+              <span aria-hidden="true">II</span>
+            </button>
+            <button id="restartBtn" class="icon-button" title="Ulangi" aria-label="Ulangi">
+              <span aria-hidden="true">R</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="stage">
+          <canvas id="game" aria-label="Area permainan"></canvas>
+          <div id="overlay" class="overlay">
+            <div class="overlay-panel">
+              <p class="kicker">Arcade ringan</p>
+              <h1>Meteor Mini</h1>
+              <p id="message" class="message">Ambil bintang, hindari meteor, kejar rekor.</p>
+              <button id="startBtn" class="primary-button">Mulai</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
